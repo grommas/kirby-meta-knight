@@ -8,49 +8,89 @@ fields:
     label: No Index
     type: select
     options:
-      enabled: Enabled
-      disabled: Disabled
-      default: Site Default
+      enabled:
+        en: Enabled
+        de: aktiviert
+      disabled:
+        en: Disabled
+        de: deaktiviert
+      default:
+        en: Site Default
+        de: standard
     default: default
     width: 1/2
-    help: Search engines will not index and display page/s.
+    help:
+      en: Search engines will not index and display page/s.
+      de: Suchmaschinen werden keine Seiten indizieren und anzeigen.
   robots_nofollow:
     label: No Follow
     type: select
     options:
-      enabled: Enabled
-      disabled: Disabled
-      default: Site Default
+      enabled:
+        en: Enabled
+        de: aktiviert
+      disabled:
+        en: Disabled
+        de: deaktiviert
+      default:
+        en: Site Default
+        de: standard
     default: default
     width: 1/2
-    help: Search engines will not follow links.
+    help:
+      en: Search engines will not follow links.
+      de: Suchmaschinen werden keinen Links folgen.
   robots_noarchive:
     label: No Archive
     type: select
     options:
-      enabled: Enabled
-      disabled: Disabled
-      default: Site Default
+      enabled:
+        en: Enabled
+        de: aktiviert
+      disabled:
+        en: Disabled
+        de: deaktiviert
+      default:
+        en: Site Default
+        de: standard
     default: default
     width: 1/2
-    help: Search engines will not cache page/s.
+    help:
+      en: Search engines will not cache page/s.
+      de: Suchmaschinen werden keine Seiten zwischenspeichern.
   robots_noimageindex:
     label: No Image Index
     type: select
     options:
-      enabled: Enabled
-      disabled: Disabled
-      default: Site Default
+      enabled:
+        en: Enabled
+        de: aktiviert
+      disabled:
+        en: Disabled
+        de: deaktiviert
+      default:
+        en: Site Default
+        de: standard
     default: default
     width: 1/2
-    help: Search engines will not associate page/s with image search results.
+    help:
+      en: Search engines will not associate page/s with image search results.
+      de: Suchmaschinen werden keine Seiten mit Bildersuchergebnissen verknüpfen.
   robots_nosnippet:
     label: No Snippet
     type: select
     options:
-      enabled: Enabled
-      disabled: Disabled
-      default: Site Default
+      enabled:
+        en: Enabled
+        de: aktiviert
+      disabled:
+        en: Disabled
+        de: deaktiviert
+      default:
+        en: Site Default
+        de: standard
     default: default
     width: 1/2
-    help: Search engines will not display description snippets for page/s.
+    help:
+      en: Search engines will not display description snippets for page/s.
+      de: Suchmaschinen werden keine Kurzbeschreibungen anzeigen.

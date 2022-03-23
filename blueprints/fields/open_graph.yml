@@ -5,54 +5,94 @@ fields:
     type: headline
     numbered: false
   og_title:
-    label: OG Title
-    help: The title of your object as it should appear within the graph. Will use *page title* as fallback.
+    label:
+      en: OG Title
+      de: OG-Titel
+    help:
+      en: The title of your object as it should appear within the graph. Will use *page title* as fallback.
+      de: Der Titel des Objekts wie es innerhalb des Graphen erscheinen soll. Verwendet standardmäßig den *Seitentitel*.
     type: text
   og_description:
-    label: OG Description
-    help: A one to two sentence description of your object. Will use *page description* and *site description* as fallbacks.
+    label:
+      en: OG Description
+      de: OG-Beschreibung
+    help:
+      en: A one to two sentence description of your object. Will use *page description* and *site description* as fallbacks.
+      de: Beschreibung des Objekts in ein bis zwei Sätzen. Verwendet standardmäßig die *Seiten-* oder *Site-Beschreibung*.
     type: text
   og_image:
-    label: OG Image (1200x630)
-    help: An image which should represent your object within the graph. Will be cropped automatically. Will use *site OG image* as fallback.
+    label:
+      en: OG Image (1200 × 630)
+      de: OG-Bild (1200 × 630)
+    help:
+      en: An image which should represent your object within the graph. Will be cropped automatically. Will use *site OG image* as fallback.
+      de: Ein Bild es Objekts wie es innerhalb des Graphen erscheinen soll. Wird automatisch zugeschnitten. Verwendet standardmäßig das *Site-OG-Bild*.
     type: files
     multiple: false
     uploads: seo-image
   og_site_name:
-    label: OG Site Name
-    help: If your object is part of a larger web site, the name which should be displayed for the overall site. Will use *site title* as fallback.
+    label:
+      en: OG Site Name
+      de: OG-Website-Titel
+    help:
+      en: If your object is part of a larger web site, the name which should be displayed for the overall site. Will use *site title* as fallback.
+      de: Wenn das Objekt Teil einer größeren Website ist, der Titel, der für den gesamten Internauftritt angezeigt werden soll. Verwendet standardmäßig den *Site-Titel*.
     type: text
     width: 1/2
   og_url:
-    label: OG URL
-    help: The canonical URL of your object that will be used as its permanent ID in the graph.
+    label:
+      en: OG URL
+      de: OG-URL
+    help:
+      en: The canonical URL of your object that will be used as its permanent ID in the graph.
+      de: Die kanonische URL des Objekts, die als permanente ID im Graphen verwendet wird.
     type: url
     width: 1/2
   og_audio:
-    label: OG Audio
-    help: The URL of an audio file to accompany this object.
+    label:
+      en: OG Audio
+      de: OG-Audio
+    help:
+      en: The URL of an audio file to accompany this object.
+      de: Die URL einer Audiodatei, die dieses Object ergänzt.
     type: url
     width: 1/2
   og_video:
-    label: OG Video
-    help: The URL of a video file that complements this object.
+    label:
+      en: OG Video
+      de: OG-Video
+    help:
+      en: The URL of a video file that complements this object.
+      de: Die URL einer Videodatei, die dieses Object ergänzt.
     type: url
     width: 1/2
   og_determiner:
-    label: OG Determiner
-    help: The word that appears before this object's title in a sentence. An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data should chose between "a" or "an". Default is "auto".
+    label:
+      en: OG Determiner
+      de: OG-Bestimmer
+    help:
+      en: The word that appears before this object's title in a sentence. An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data should chose between "a" or "an". Default is "auto".
+      de: Das Wort, das innerhalb eines Satzes vor dem Objekttitel erscheint. Eine Aufzählung von (a, an, the, "", auto). Der Datenkonsument entscheidet zwischen "a" und "an", wenn auto gewählt wurde. Standard ist "auto".
     type: text
     width: 1/2
   og_type:
-    label: OG Type
-    help: The type of your object, e.g., "video.movie". Depending on the type you specify, other properties may also be required.
+    label:
+      en: OG Type
+      de: OG-Art
+    help:
+      en: The type of your object, e.g., "video.movie". Depending on the type you specify, other properties may also be required.
+      de: Die Art des Objekts, z. B. "video.movie". Abhängig vom gewählten Type, können andere Angaben verpflichtend sein.
     type: select
     default: website
     options:
       website: Website
-      article: Article
+      article:
+        en: Article
+        de: Artikel
   og_type_article_published_time:
-    label: OG Article Published Time
+    label:
+      en: OG Article Published Time
+      de: OG-Veröffentlichungsdatum
     type: date
     time: true
     default: now
@@ -60,7 +100,9 @@ fields:
     when:
       og_type: article
   og_type_article_modified_time:
-    label: OG Article Modified Time
+    label:
+      en: OG Article Modified Time
+      de: OG-Veränderungsdatum
     type: date
     time: true
     default: now
@@ -68,7 +110,9 @@ fields:
     when:
       og_type: article
   og_type_article_expiration_time:
-    label: OG Article Expiration Time
+    label:
+      en: OG Article Expiration Time
+      de: OG-Ablaufdatum
     type: date
     time: true
     default: now
@@ -76,7 +120,9 @@ fields:
     when:
       og_type: article
   og_type_article_author:
-    label: OG Article Author/s
+    label:
+      en: OG Article Author/s
+      de: 'OG Autor:innen'
     type: structure
     fields:
       url:
@@ -84,36 +130,56 @@ fields:
         type: url
         required: true
       firstname:
-        label: First Name
+        label:
+          en: First Name
+          de: Vorname
         type: text
         width: 1/2
       lastname:
-        label: Last Name
+        label:
+          en: Last Name
+          de: Nachname
         type: text
         width: 1/2
       username:
-        label: Username
+        label:
+          en: Username
+          de: Benutzername
         type: text
         width: 1/2
       gender:
-        label: Gender
+        label:
+          en: Gender
+          de: Geschlecht
         type: select
         options:
-          male: Male
-          female: Female
-          other: Other
+          male:
+            en: Male
+            de: männlich
+          female:
+            en: Female
+            de: weiblich
+          other:
+            en: Other
+            de: divers
         width: 1/2
     when:
       og_type: article
   og_type_article_section:
-    label: OG Article Section
-    help: A high-level section name. E.g. Technology
+    label:
+      en: OG Article Section
+      de: OG-Themengebiet
+    help:
+      en: A high-level section name. E.g. Technology
+      de: Ein übergeordnetes Themengebiet. Z. B. Technologie
     type: text
     width: 1/2
     when:
       og_type: article
   og_type_article_tag:
-    label: OG Article Tags
+    label:
+      en: OG Article Tags
+      de: OG-Artikeltags
     help: Tag words associated with this article
     type: tags
     width: 1/2

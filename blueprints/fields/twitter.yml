@@ -1,39 +1,65 @@
 type: group
 fields:
   twitter_headline:
-    label: Twitter Card
+    label:
+      en: Twitter Card
+      de: Twitter-Karte
     type: headline
     numbered: false
   twitter_title:
-    label: Twitter Title
+    label:
+      en: Twitter Title
+      de: Twitter-Titel
     type: text
     maxlength: 70
-    help: The title of your page as it should appear on Twitter. Will use *page title* as fallback.
+    help:
+      en: The title of your page as it should appear on Twitter. Will use *page title* as fallback.
+      de: Der Titel der Seite wie er auf Twitter erscheinen soll. Verwendet standardmäßig den *Seitentitel*.
   twitter_description:
-    label: Twitter Description
+    label:
+      en: Twitter Description
+      de: Twitter-Beschreibung
     type: text
     maxlength: 300
-    help: A one to two sentence description of your page. Will use *page description* and *site description* as fallbacks.
+    help:
+      en: A one to two sentence description of your page. Will use *page description* and *site description* as fallbacks.
+      de: Beschreibung des Objekts in ein bis zwei Sätzen. Verwendet standardmäßig die *Seiten-* oder *Site-Beschreibung*.
   twitter_image:
-    label: Twitter Image (1200x675)
-    help: Will be cropped automatically.
+    label:
+      en: Twitter Image (1200 × 675)
+      de: Twitter-Bild (1200 × 675)
+    help:
+      en: Will be cropped automatically.
+      de: Wird automatisch zugeschnitten.
     type: files
     uploads: seo-image
     multiple: false
     width: 1/2
   twitter_card_type:
-    label: Card Type
+    label:
+      en: Card Type
+      de: Kartentyp
     width: 1/2
     type: select
     options:
-      summary_large_image: Summary Card with Large Image
-      summary: Summary Card
-    help: The card layout Twitter uses for links to this page.
+      summary_large_image:
+        en: Summary Card with Large Image
+        de: Zusammenfassung mit großem Bild
+      summary:
+        en: Summary Card
+        de: Zusammenfassung
+    help:
+      en: The card layout Twitter uses for links to this page.
+      de: Das Kartenlayout, das Twitter für diese Seite verwendet.
   twitter_site:
-    label: @username of website
+    label:
+      en: '@username of website'
+      de: '@benutzername der Website'
     type: text
     width: 1/2
   twitter_creator:
-    label: @username of content creator
+    label:
+      en: '@username of content creator'
+      de: '@benutzername des Urhebers'
     type: text
     width: 1/2

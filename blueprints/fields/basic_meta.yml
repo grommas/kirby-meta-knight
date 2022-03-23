@@ -1,29 +1,51 @@
 type: group
 fields:
   meta_headline:
-    label: Basic Meta Information
+    label:
+      en: Basic Meta Information
+      de: Allgemeine Informationen
     type: headline
     numbered: false
   meta_title:
-    label: Title (Override)
+    label:
+      en: Title (Override)
+      de: Titel (abweichend)
     type: text
-    help: The page title as it should be displayed on search engines. Will default to Kirby page title when this field is empty.
+    help:
+      en: The page title as it should be displayed on search engines. Will default to Kirby page title when this field is empty.
+      de: Der Seitentitel wie er von Suchmaschinen angezeigt werden soll. Verwendet Kirbys Standardtitel, wenn dieses Feld leer ist.
   meta_description:
-    label: Description
+    label:
+      en: Description
+      de: Beschreibung
     type: text
-    help: A short description of the site/page that will be displayed underneath the page title by search engines.
+    help:
+      en: A short description of the site/page that will be displayed underneath the page title by search engines.
+      de: Eine Kurzbeschreibung der Seite, die von Suchmaschinen unterhalb des Titels angezeigt wird.
   meta_canonical_url:
-    label: Canonical URL
+    label:
+      en: Canonical URL
+      de: Kanonische URL
     type: url
-    help: The canonical URL of the page. Will default to page URL when this field is empty.
+    help:
+      en: The canonical URL of the page. Will default to page URL when this field is empty.
+      de: Die kanonische URL der Seite. Verwendet die Seiten-URL, wenn dieses Feld leer ist.
   meta_author:
-    label: Author/s
+    label:
+      en: Author/s
+      de: 'Autor:in'
     type: text
-    help: The name of the author of the page. Can be an entity or a person.
+    help:
+      en: The name of the author of the page. Can be an entity or a person.
+      de: 'Der Names der Autor:innen der Seite. Können Einrichtungen oder Personen sein.'
   meta_image:
-    label: Image
+    label:
+      en: Image
+      de: Bild
     type: files
     multiple: false
   meta_phone_number:
-    label: Phone Number
+    label:
+      en: Phone Number
+      de: Telefonnummer
     type: text

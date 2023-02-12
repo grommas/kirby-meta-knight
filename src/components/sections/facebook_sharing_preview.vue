@@ -4,7 +4,10 @@
       <span class="facebook-icon"></span> {{ headline }}
     </div>
     <div class="open-graph-preview">
-      <div class="open-graph-preview__image-container">
+      <div
+        class="open-graph-preview__image-container"
+        :class="{ 'open-graph-preview__image-container--placeholder': !this.store_image.length }"
+      >
         <img
           v-if="this.store_image.length"
           :src="og_image"
@@ -127,13 +130,16 @@ export default {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.open-graph-preview__image-container {
-  position: relative;
-  width: 100%;
+.open-graph-preview__image-container--placeholder {
   padding-bottom: 52.25%;
 }
 
-.open-graph-preview__image-container:before {
+.open-graph-preview__image-container {
+  position: relative;
+  width: 100%;
+}
+
+.open-graph-preview__image-container--placeholder:before {
   content: "Image Missing";
   color: #ddd;
   position: absolute;
@@ -146,10 +152,8 @@ export default {
 }
 
 .open-graph-preview__preview-image {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .open-graph-preview__content-container {

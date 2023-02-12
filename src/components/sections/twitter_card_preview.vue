@@ -6,7 +6,10 @@
     <div class="twitter-cards">
       <template v-if="twitter_card_type === 'summary_large_image'">
         <div class="twitter-card twitter-card--horizontal">
-          <div class="twitter-card__image">
+          <div
+            class="twitter-card__image"
+            :class="{ 'twitter-card__image--placeholder': !this.store_image.length }"
+          >
             <img
               v-if="this.store_image.length"
               :src="twitter_image"
@@ -25,7 +28,10 @@
       </template>
       <template v-else>
         <div class="twitter-card">
-          <div class="twitter-card__image">
+          <div
+            class="twitter-card__image"
+            :class="{ 'twitter-card__image--placeholder': !this.store_image.length }"
+          >
             <img
               v-if="this.store_image.length"
               :src="twitter_image"
@@ -153,21 +159,27 @@ export default {
   max-width: 507px;
 }
 
+.twitter-card--horizontal .twitter-card__image--placeholder {
+  padding-bottom: 52.25%;
+}
+
 .twitter-card--horizontal .twitter-card__image {
   width: 100%;
-  padding-bottom: 52.25%;
   border-bottom: 1px solid #e1e8ed;
   border-right: none;
+}
+
+.twitter-card__image--placeholder {
+  padding-bottom: 25%;
 }
 
 .twitter-card__image {
   position: relative;
   width: 25%;
-  padding-bottom: 25%;
   border-right: 1px solid #e1e8ed;
 }
 
-.twitter-card__image:before {
+.twitter-card__image--placeholder:before {
   content: "Image Missing";
   color: #ddd;
   position: absolute;
@@ -179,15 +191,13 @@ export default {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.twitter-card--horizontal .twitter-card__image:before {
+.twitter-card--horizontal .twitter-card__image--placeholder:before {
   font-size: 2em;
 }
 
 .twitter-card__preview-image {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .twitter-card__content-container {

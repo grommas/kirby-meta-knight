@@ -1,15 +1,11 @@
 <?php
   $twitter_image_thumb = [
-      'width'   => 1200,
-      'height'  => 675,
-      'quality' => 80,
-      'crop'    => true
+      'width'   => 1600,
+      'quality' => 75,
     ];
   $og_image_thumb = [
-      'width'   => 1200,
-      'height'  => 630,
-      'quality' => 80,
-      'crop'    => true
+      'width'   => 1600,
+      'quality' => 75,
     ];
 
   if(option('diesdasdigital.meta-knight.siteTitleAsHomePageTitle', false) && $page->isHomePage()) {
